@@ -1,6 +1,6 @@
 // ─── SESSION GUARD ────────────────────────────────────────
 if (localStorage.getItem("isLoggedIn") !== "true") {
-  window.location.href = "signin.html";
+  window.location.href = "index.html";
 }
 
 // ─── STATE ────────────────────────────────────────────────

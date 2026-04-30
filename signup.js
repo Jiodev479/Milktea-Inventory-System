@@ -77,5 +77,5 @@ signupForm.addEventListener("submit", function (e) {
   // Save user
   localStorage.setItem("user", JSON.stringify({ username, password }));
   alert("Account created successfully! Please sign in.");
-  window.location.href = "signin.html";
+  window.location.href = "index.html";
 });

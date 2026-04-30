@@ -468,7 +468,7 @@ function deleteItem(index) {
 function logout() {
   if (confirm("Log out of ERYX?")) {
     localStorage.removeItem("isLoggedIn");
-    window.location.href = "signin.html";
+    window.location.href = "index.html";
   }
 }
 

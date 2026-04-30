@@ -1,0 +1,426 @@
+/* ── RESET ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* ── BODY ── */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    linear-gradient(rgba(20, 12, 4, 0.18), rgba(20, 12, 4, 0.18)),
+    url("https://www.image2url.com/r2/default/images/1776587976593-863a589a-3aa6-4fe8-99a8-2846416b328a.png")
+      no-repeat center center / cover;
+  overflow: hidden;
+}
+
+/* ── CONTAINER ── */
+.container {
+  display: flex;
+  width: 900px;
+  height: 530px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 32px 64px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ── PAGE LOAD ANIMATIONS ── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(36px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* ── LEFT PANEL ── */
+.left-panel {
+  flex: 1.1;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 44px 48px;
+  animation: fadeLeft 0.9s 0.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.brand-chip {
+  display: inline-block;
+  background: rgba(212, 165, 80, 0.18);
+  border: 1px solid rgba(212, 165, 80, 0.35);
+  color: #d4a550;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 99px;
+  margin-bottom: 14px;
+  animation: slideDown 0.6s 0.3s both;
+}
+
+.left-panel h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 8px;
+  animation: slideDown 0.6s 0.45s both;
+}
+
+.left-panel p {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+  animation: slideDown 0.6s 0.55s both;
+}
+
+/* ── RIGHT PANEL ── */
+.right-panel {
+  flex: 0.9;
+  background: rgba(255, 248, 235, 0.13);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 44px;
+  animation: fadeRight 0.9s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ── LOGO ── */
+.logo-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #c9933a, #8a5e1a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 24px rgba(180, 120, 30, 0.35);
+  overflow: hidden;
+  animation: popIn 0.6s 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.logo-wrap img {
+  width: 65px;
+  height: 65x;
+  object-fit: contain;
+}
+
+/* ── FORM TITLES ── */
+.form-title {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #3f1e00;
+  margin-bottom: 4px;
+  text-align: center;
+  animation: slideDown 0.5s 0.45s both;
+}
+
+.form-sub {
+  font-size: 12px;
+  color: rgba(66, 23, 2, 0.925);
+  text-align: center;
+  margin-bottom: 22px;
+  letter-spacing: 0.2px;
+  animation: slideDown 0.5s 0.52s both;
+}
+
+/* ── FORM ── */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* full width children */
+}
+
+/* ── INPUT FIELD WRAPPER ── */
+.field-wrap {
+  position: relative;
+  width: 100%;
+  margin-bottom: 12px;
+  animation: slideDown 0.5s both;
+}
+
+/* stagger each field */
+.field-wrap:nth-child(1) {
+  animation-delay: 0.58s;
+}
+.field-wrap:nth-child(2) {
+  animation-delay: 0.66s;
+}
+
+.field-icon {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  transition: color 0.25s;
+}
+
+/* icon brightens on focus */
+.field-wrap:focus-within .field-icon {
+  color: rgba(212, 165, 80, 0.85);
+}
+
+/* ── INPUTS ── */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 13px 14px 13px 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition:
+    border-color 0.25s,
+    background 0.25s,
+    box-shadow 0.25s,
+    transform 0.2s;
+  backdrop-filter: blur(6px);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+input:focus {
+  border-color: rgba(212, 165, 80, 0.7);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(212, 165, 80, 0.12);
+  transform: translateY(-1px);
+}
+
+.eye-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(0, 0, 0, 0.603);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  transition:
+    color 0.2s,
+    transform 0.2s;
+}
+
+.eye-btn:hover {
+  color: rgb(190, 92, 0);
+  transform: translateY(-50%) scale(1.15);
+}
+
+/* ── FORGOT ROW ── */
+.forgot-row {
+  width: 100%;
+  text-align: right;
+  margin-bottom: 16px;
+  animation: slideDown 0.5s 0.74s both;
+}
+
+.forgot {
+  font-size: 11.5px;
+  color: rgba(212, 165, 80, 0.8);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.forgot:hover {
+  color: #d4a550;
+}
+
+/* ── SIGN IN BUTTON ── */
+.btn-signin {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #c9933a 0%, #8a5e1a 50%, #c9933a 100%);
+  background-size: 200% auto;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition:
+    background-position 0.4s,
+    transform 0.25s,
+    box-shadow 0.25s;
+  box-shadow: 0 8px 20px rgba(140, 80, 20, 0.4);
+  animation: slideDown 0.5s 0.8s both;
+}
+
+.btn-signin:hover {
+  background-position: right center; /* shimmer sweep */
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(140, 80, 20, 0.5);
+}
+
+.btn-signin:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(140, 80, 20, 0.35);
+}
+
+/* ── ERROR / SUCCESS MESSAGE ── */
+.error-msg {
+  font-size: 12px;
+  color: #ff0000;
+  margin-top: 10px;
+  min-height: 18px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0 12px;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 11px;
+  animation: slideDown 0.5s 0.88s both;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ── SIGN UP ROW ── */
+.signup-row {
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  animation: slideDown 0.5s 0.94s both;
+}
+
+.signup-row a {
+  color: #f1a413;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.signup-row a:hover {
+  color: #ffb301;
+  text-decoration: underline;
+}
+
+/* remove Edge / Chromium built-in reveal and clear buttons */
+input[type="password"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Edge (Chromium) / IE legacy reveal & clear */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+/* Chromium-based browsers: hide credential/autofill button if present */
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
